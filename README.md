@@ -1,58 +1,27 @@
-# Trilha Flutter
+# 👧🏻 Nome:
 
-Esta pasta concentra os projetos Flutter desenvolvidos durante a disciplina.
+Maria Clara Florente Dalapria.
 
-## Objetivo da Trilha
 
-Aplicar os conceitos de Dart na construção de interfaces e fluxos de aplicações móveis, com foco em:
+# 🎬 Movie App — Lista de Filmes
 
-- Estrutura de projetos Flutter
-- Widgets, layouts e componentização
-- Estado e composição de telas
-- Boas práticas de organização
+App Flutter de catálogo de filmes desenvolvido como projeto de aula, demonstrando navegação declarativa com **AutoRoute**.
 
-## Estrutura
+---
 
-```text
-flutter/
-  app/
-    lib/          # aplicação principal
-    docs/         # roteiros de aula
-    test/         # testes de widget/unidade
-    aula_widget/  # projeto dedicado a widgets e layouts
-```
+## 📱 Telas
 
-## Projeto Principal
+O app possui duas telas. A **Tela Principal** exibe um grid de temas por gênero e uma lista de filmes em destaque. A **Tela de Detalhes** exibe a imagem e o título do filme selecionado.
 
-Local: `flutter/app`
+---
 
-```bash
-cd flutter/app
-flutter pub get
-flutter run
-flutter test
-```
+## 🧭 Navegação com AutoRoute
 
-## Projeto Complementar de Widgets
+A navegação foi implementada em três etapas como desafios de aula.
 
-Local: `flutter/app/aula_widget`
+**Desafio 1 — Declarar as rotas:** todas as telas do app são registradas em um único lugar, o `AppRouter`, usando a anotação `@AutoRouterConfig`. Cada tela recebe um `AutoRoute`, e a tela inicial é marcada com `initial: true`.
 
-```bash
-cd flutter/app/aula_widget
-flutter pub get
-flutter run
-flutter test
-```
+**Desafio 2 — Integrar no MaterialApp:** em vez do `MaterialApp` tradicional, usamos o `MaterialApp.router`, que recebe o `AppRouter` pelo parâmetro `routerConfig`. Isso entrega o controle total da navegação ao AutoRoute.
 
-## Fluxo Recomendado em Aula
+**Desafio 3 — Navegar entre telas:** a navegação é feita com `context.pushRoute` e `context.popRoute`, substituindo o `Navigator.push` e `Navigator.pop` tradicionais. O resultado visual é idêntico, mas o código fica mais limpo, tipado e centralizado.
 
-1. Abra o roteiro em `app/docs/`.
-2. Execute o projeto correspondente ao tema da aula.
-3. Replique o exemplo e implemente variações.
-4. Versione a evolução do código por aula.
-
-## Dicas Rápidas
-
-- Verifique dispositivos com `flutter devices`.
-- Execute `flutter doctor` ao preparar o ambiente.
-- Evite commitar artefatos de build e caches locais.
