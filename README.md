@@ -2,6 +2,8 @@
 
 Maria Clara Florente Dalapria.
 
+---
+
 
 # 🎬 Movie App — Lista de Filmes
 
